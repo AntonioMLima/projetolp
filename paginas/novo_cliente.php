@@ -28,7 +28,6 @@
             }
         } catch (Exception $e){
             $erro = "Erro: ".$e->getMessage();
-            echo $e;
         }
     }
 ?>

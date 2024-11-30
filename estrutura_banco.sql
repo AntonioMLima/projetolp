@@ -33,8 +33,7 @@ CREATE TABLE veiculos (
 CREATE TABLE vagas (
     id_vaga INT AUTO_INCREMENT PRIMARY KEY,
     esta_ocupada BOOLEAN NOT NULL, 
-    cpf_cliente char(11),
-    placa_veiculo char(7),
+    placa_veiculo char(7), 
     tipo_vaga INT,
     andar INT,
 	ocupada bool not null,
@@ -49,15 +48,7 @@ drop cpf_cliente;
 
 
 
-CREATE TABLE produto (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    descricao TEXT,
-    preco DECIMAL(10, 2) NOT NULL,
-    estoque_minimo INT NOT NULL,
-    categoria_id INT,
-    FOREIGN KEY (categoria_id) REFERENCES categoria(id)
-);
+
 
 alter table vagas
 change ocupada esta_ocupada bool not null;
